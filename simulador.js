@@ -41,7 +41,7 @@ const PESO_FIO_B_NA_TARIFA = 0.28;
 // Residências ficam em torno de 0.2 a 0.4. Usamos um valor conservador.
 const FATOR_SIMULTANEIDADE = 0.25;
 
-const WHATSAPP_NUMERO = "553237217064";
+const WHATSAPP_NUMERO = "5532984596667";
 
 /* --------------------------------------------------------- */
 
