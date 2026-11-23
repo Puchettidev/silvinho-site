@@ -1,298 +1,600 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="no-js">
 
 <head>
     <meta charset="UTF-8">
     <meta name="google-site-verification" content="-CArdIEhp9KW-egl9GGRrgTKld8qE43Q8O9rg07cRd4">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Silvinho Eletrônica e Energia Solar | Assistência Técnica em Muriaé-MG</title>
-    <meta name="description" content="Assistência técnica especializada em celulares, eletrônicos, drones, TVs e soluções em energia solar em Muriaé-MG. Atendimento rápido, profissional e com garantia.">
-    <meta name="keywords" content="assistência técnica Muriaé, conserto celular Muriaé, energia solar Muriaé, reparo placa, troca tela, drones, TVs, Silvinho Eletrônica">
+    <title>Energia Solar em Muriaé-MG | Silvinho Eletrônica e Energia Solar</title>
+    <meta name="description" content="Instalação de placas solares em Muriaé e região, com quem está na cidade há mais de 30 anos. Simule sua economia, veja como funciona e peça seu orçamento pelo WhatsApp.">
     <meta name="author" content="Silvinho Eletrônica e Energia Solar">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#071B3B">
+    <link rel="canonical" href="https://silvinhoeletronica.com.br/">
 
-    <meta property="og:title" content="Silvinho Eletrônica e Energia Solar">
-    <meta property="og:description" content="Assistência técnica especializada e soluções em energia solar em Muriaé-MG.">
+    <meta property="og:locale" content="pt_BR">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="imagem/silvinho-hero.png">
+    <meta property="og:site_name" content="Silvinho Eletrônica e Energia Solar">
+    <meta property="og:title" content="Energia solar em Muriaé-MG | Silvinho Eletrônica e Energia Solar">
+    <meta property="og:description" content="Instalação de placas solares em Muriaé e região. Simule sua economia e peça seu orçamento.">
+    <meta property="og:url" content="https://silvinhoeletronica.com.br/">
+    <!-- TROCAR: quando houver foto real de uma instalação, usar ela aqui (1200x630) -->
+    <meta property="og:image" content="https://silvinhoeletronica.com.br/imagem/silvinho-hero.png">
+    <meta property="og:image:alt" content="Silvinho Eletrônica e Energia Solar, em Muriaé-MG">
+    <meta name="twitter:card" content="summary_large_image">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="montagem.css">
+
+    <script>document.documentElement.classList.remove("no-js");</script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Electrician",
+        "@id": "https://silvinhoeletronica.com.br/#empresa",
+        "name": "Silvinho Eletrônica e Energia Solar",
+        "description": "Venda e instalação de sistemas de energia solar fotovoltaica e assistência técnica em eletrônicos em Muriaé-MG.",
+        "url": "https://silvinhoeletronica.com.br/",
+        "image": "https://silvinhoeletronica.com.br/imagem/silvinho-hero.png",
+        "telephone": "+55-32-3721-7064",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rua Benedito Valadares, 88",
+            "addressLocality": "Muriaé",
+            "addressRegion": "MG",
+            "addressCountry": "BR"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "09:00",
+                "closes": "13:00"
+            }
+        ],
+        "areaServed": [
+            { "@type": "City", "name": "Muriaé" },
+            { "@type": "AdministrativeArea", "name": "Zona da Mata de Minas Gerais" }
+        ],
+        "sameAs": ["https://www.instagram.com/silvinhoeletronica/"],
+        "knowsAbout": ["Energia solar fotovoltaica", "Instalação de placas solares", "Assistência técnica em celulares", "Reparo de TVs", "Manutenção de drones"]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "A energia solar funciona em dia nublado?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Funciona, mas gera menos. Em dias nublados a produção cai, às vezes bastante. Por isso o sistema é dimensionado pela média de geração do ano inteiro, e não pelo dia mais ensolarado." }
+            },
+            {
+                "@type": "Question",
+                "name": "E à noite?",
+                "acceptedAnswer": { "@type": "Answer", "text": "À noite os painéis não geram. No sistema ligado à rede, o que sobra durante o dia vai para a rede da distribuidora e vira crédito em kWh, usado à noite e nos dias de pouca geração. Se faltar energia da rede, o sistema ligado à rede desliga por segurança; para ter energia durante quedas é preciso um sistema com baterias." }
+            },
+            {
+                "@type": "Question",
+                "name": "O que muda com a Lei 14.300 (taxa mínima e Fio B)?",
+                "acceptedAnswer": { "@type": "Answer", "text": "A conta não zera: continua existindo um valor mínimo cobrado pela distribuidora, além da taxa de iluminação pública. Para sistemas com pedido feito a partir de 2023, parte da tarifa de distribuição (o chamado Fio B) passa a ser cobrada sobre a energia que você injeta na rede e usa depois. Essa cobrança é gradual: 15% em 2023, 30% em 2024, 45% em 2025, 60% em 2026, 75% em 2027 e 90% em 2028. Mesmo assim, a energia solar continua reduzindo bastante a conta." }
+            },
+            {
+                "@type": "Question",
+                "name": "Precisa de manutenção?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Pouca. O principal é limpar os painéis quando acumulam poeira ou sujeira e fazer uma revisão periódica das conexões, da estrutura e do inversor. Acompanhar a geração pelo aplicativo do inversor ajuda a perceber rápido se algo saiu do normal." }
+            },
+            {
+                "@type": "Question",
+                "name": "Quanto tempo dura um sistema de energia solar?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Os painéis costumam ter garantia de desempenho de até 25 anos e podem continuar gerando depois disso, com eficiência um pouco menor. O inversor tem vida útil menor e, ao longo da vida do sistema, pode precisar ser trocado uma vez." }
+            },
+            {
+                "@type": "Question",
+                "name": "Quanto tempo leva a instalação?",
+                "acceptedAnswer": { "@type": "Answer", "text": "A montagem em uma casa costuma levar de um a poucos dias. O processo completo, com projeto, aprovação da distribuidora e vistoria, leva mais tempo, porque depende dos prazos da distribuidora. Informamos o prazo estimado no orçamento." }
+            }
+        ]
+    }
+    </script>
 </head>
 
 <body>
-    <div class="site-noise" aria-hidden="true"></div>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
     <header class="site-header">
         <nav class="navbar" aria-label="Navegação principal">
-            <a class="brand" href="#inicio" aria-label="Silvinho Eletrônica e Energia Solar">
-                <span class="brand-mark">SE</span>
+            <a class="brand" href="#inicio" aria-label="Silvinho Eletrônica e Energia Solar, início">
+                <span class="brand-mark" aria-hidden="true">SE</span>
                 <span>
                     <strong>Silvinho Eletrônica</strong>
                     <small>Energia Solar</small>
                 </span>
             </a>
 
-            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
                 <span></span>
                 <span></span>
             </button>
 
-            <ul class="nav-links">
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#diferenciais">Diferenciais</a></li>
-                <li><a href="#solar">Solar</a></li>
-                <li><a href="#prova">Avaliações</a></li>
-                <li><a href="#contato">Contato</a></li>
+            <ul class="nav-links" id="menu">
+                <li><a href="#simulador">Simulador</a></li>
+                <li><a href="#como-funciona">Como funciona</a></li>
+                <li><a href="#obras">Obras</a></li>
+                <li><a href="#duvidas">Dúvidas</a></li>
+                <li><a href="#orcamento">Orçamento</a></li>
+                <li><a href="#assistencia">Assistência técnica</a></li>
+                <li class="nav-cta-mobile"><a href="https://wa.me/553237217064?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20energia%20solar." target="_blank" rel="noopener">Falar no WhatsApp</a></li>
             </ul>
 
-            <a class="nav-cta" href="https://wa.me/553237217064?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20a%20Silvinho%20Eletr%C3%B4nica." target="_blank" rel="noopener">
-                WhatsApp
-            </a>
+            <a class="nav-cta" href="https://wa.me/553237217064?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20energia%20solar." target="_blank" rel="noopener">WhatsApp</a>
         </nav>
     </header>
 
-    <main>
+    <main id="conteudo">
+        <!-- 1. HERO -->
         <section class="hero" id="inicio">
             <div class="hero-backdrop" aria-hidden="true">
-                <img src="imagem/silvinho-hero.png" alt="">
+                <!-- TROCAR: foto real de uma instalação solar feita pela empresa (ideal: telhado com painéis, horizontal, até 300 KB) -->
+                <img src="imagem/silvinho-hero.png" alt="" fetchpriority="high">
             </div>
 
             <div class="hero-inner">
-                <div class="hero-content reveal">
-                    <span class="eyebrow">Muriaé-MG • assistência premium</span>
-                    <h1>Assistência Técnica Especializada em Muriaé</h1>
-                    <p>
-                        Conserto de celulares, eletrônicos, drones, TVs e soluções em energia solar com atendimento rápido e profissional.
-                    </p>
+                <span class="eyebrow">Muriaé-MG e região</span>
+                <h1>Energia solar em Muriaé e região, com quem está na cidade há <em>mais de 30 anos</em></h1>
+                <p class="hero-lead">Projeto, instalação e acompanhamento do seu sistema de energia solar. Reduza sua conta de luz em até 90%* e fale com uma empresa que você encontra aqui na cidade.</p>
 
-                    <div class="hero-actions">
-                        <a class="btn btn-primary" href="https://wa.me/553237217064?text=Ol%C3%A1%2C%20preciso%20de%20atendimento%20t%C3%A9cnico%20com%20a%20Silvinho%20Eletr%C3%B4nica." target="_blank" rel="noopener">
-                            Chamar no WhatsApp
-                        </a>
-                        <a class="btn btn-secondary" href="#contato">Solicitar orçamento</a>
+                <div class="btn-group">
+                    <a class="btn btn-primary" href="#simulador">Simular minha economia</a>
+                    <a class="btn btn-secondary" href="https://wa.me/553237217064?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20energia%20solar." target="_blank" rel="noopener">Falar no WhatsApp</a>
+                </div>
+
+                <ul class="hero-badges" aria-label="Destaques">
+                    <li><strong>30+</strong> anos em Muriaé</li>
+                    <li>Visita técnica</li>
+                    <li>Homologação na distribuidora</li>
+                </ul>
+
+                <p class="footnote" id="nota-90">*O sistema solar reduz a parte da conta referente ao consumo. Continuam sendo cobrados o valor mínimo da distribuidora (equivalente a 30, 50 ou 100 kWh, conforme a ligação seja mono, bi ou trifásica), a taxa de iluminação pública e, para sistemas novos, uma parte da tarifa de distribuição (Fio B) prevista na Lei 14.300/2022.</p>
+            </div>
+        </section>
+
+        <!-- 2. ANIMAÇÃO DE MONTAGEM -->
+        <section class="mtg-intro" aria-labelledby="mtg-titulo">
+            <div>
+                <span class="eyebrow">Passo a passo</span>
+                <h2 id="mtg-titulo">Veja como sua casa vira uma usina de energia</h2>
+                <p>Da estrutura no telhado até a economia na conta, peça por peça.</p>
+                <p class="mtg-hint" aria-hidden="true">Role para montar ↓</p>
+            </div>
+        </section>
+
+        <section class="mtg" id="montagem" aria-label="Animação da montagem de um sistema solar">
+            <div class="mtg-sticky">
+                <ol class="mtg-steps">
+                    <li><strong>Visita e projeto</strong><p>Analisamos sua conta, o telhado e dimensionamos o sistema ideal.</p></li>
+                    <li><strong>Estrutura</strong><p>Trilhos de alumínio fixados com segurança e vedação no telhado.</p></li>
+                    <li><strong>Painéis solares</strong><p>Módulos com garantia de desempenho de até 25 anos.</p></li>
+                    <li><strong>Inversor</strong><p>Converte a energia do sol em energia pronta para sua casa.</p></li>
+                    <li><strong>Ligação e homologação</strong><p>Cuidamos da parte elétrica e da aprovação junto à distribuidora.</p></li>
+                    <li><strong>Gerando economia</strong><p>O sol nasce e sua conta de luz começa a cair.</p></li>
+                </ol>
+
+                <div class="mtg-stage">
+                    <svg id="mtg-cena" viewBox="0 0 800 600" role="img" aria-label="Ilustração de uma casa recebendo estrutura, painéis solares e inversor, até começar a gerar energia">
+                        <defs>
+                            <linearGradient id="mtg-gPanel" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0" stop-color="#1d4f9c" /><stop offset="1" stop-color="#0b2556" />
+                            </linearGradient>
+                            <radialGradient id="mtg-gSun"><stop offset="0" stop-color="#FFE08a" /><stop offset=".6" stop-color="#FFB000" /><stop offset="1" stop-color="#FF7A00" /></radialGradient>
+                            <filter id="mtg-glow"><feGaussianBlur stdDeviation="6" result="b" /><feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+                        </defs>
+
+                        <g id="mtg-sol" opacity="0">
+                            <g id="mtg-raios" stroke="#FFB000" stroke-width="4" stroke-linecap="round" opacity=".7"></g>
+                            <circle cx="680" cy="90" r="42" fill="url(#mtg-gSun)" filter="url(#mtg-glow)" />
+                        </g>
+
+                        <rect x="0" y="520" width="800" height="80" fill="#0d2f5f" />
+                        <rect x="0" y="520" width="800" height="4" fill="#1a4785" />
+
+                        <g id="mtg-casa">
+                            <rect x="180" y="320" width="440" height="200" fill="#e9eef6" />
+                            <rect x="180" y="320" width="440" height="14" fill="#c9d3e2" />
+                            <rect x="230" y="370" width="80" height="70" rx="4" fill="#9cc2ea" />
+                            <path d="M270 370v70M230 405h80" stroke="#e9eef6" stroke-width="4" />
+                            <rect x="370" y="410" width="70" height="110" rx="4" fill="#8a5a3c" />
+                            <circle cx="428" cy="468" r="4" fill="#FFB000" />
+                            <polygon points="140,322 660,322 590,180 210,180" fill="#b2452f" />
+                            <polygon points="140,322 660,322 652,306 148,306" fill="#8f3523" />
+                            <rect x="196" y="455" width="28" height="40" rx="3" fill="#5b6b82" />
+                            <circle cx="210" cy="470" r="7" fill="#e9eef6" />
+                        </g>
+
+                        <g id="mtg-trilhos"></g>
+                        <g id="mtg-paineis"></g>
+
+                        <g id="mtg-inversor">
+                            <rect x="540" y="380" width="56" height="78" rx="6" fill="#f4f7fb" stroke="#9aa8bc" stroke-width="2" />
+                            <rect x="550" y="392" width="36" height="16" rx="2" fill="#071B3B" />
+                            <circle id="mtg-led" cx="568" cy="440" r="5" fill="#5b6b82" />
+                        </g>
+
+                        <path id="mtg-cabo" d="M560 300 L600 300 L600 380 M568 458 L568 500 L210 500 L210 495" fill="none" stroke="#FF7A00" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                        <g id="mtg-particulas"></g>
+                    </svg>
+                    <div class="mtg-counter" id="mtg-counter" aria-hidden="true">
+                        <small>Exemplo de economia / ano</small>
+                        <strong id="mtg-valor">R$ 0</strong>
+                    </div>
+                </div>
+                <div class="mtg-progress" aria-hidden="true"><i id="mtg-barra"></i></div>
+            </div>
+        </section>
+
+        <!-- 3. SIMULADOR -->
+        <section class="section section--soft" id="simulador" aria-labelledby="sim-titulo">
+            <div class="section-heading reveal">
+                <span class="eyebrow">Simulador de economia</span>
+                <h2 id="sim-titulo">Quanto você pode economizar?</h2>
+                <p>Informe o valor médio da sua conta de luz e o tipo de ligação. Em segundos você vê uma estimativa do sistema e da economia.</p>
+            </div>
+
+            <div class="sim">
+                <form class="sim-form reveal" id="sim-form" novalidate>
+                    <div class="field">
+                        <label for="sim-conta">Valor médio da conta de luz</label>
+                        <div class="input-money">
+                            <span aria-hidden="true">R$</span>
+                            <input class="input" id="sim-conta" name="conta" type="text" inputmode="decimal" autocomplete="off" placeholder="350" value="350" aria-describedby="sim-conta-dica">
+                        </div>
+                        <span class="field-hint" id="sim-conta-dica">Use a média dos últimos 12 meses, se tiver.</span>
                     </div>
 
-                    <div class="hero-metrics" aria-label="Destaques da empresa">
-                        <span><strong>30+</strong> anos de experiência</span>
-                        <span><strong>9</strong> linhas de serviço</span>
-                        <span><strong>MG</strong> suporte local</span>
+                    <fieldset class="field">
+                        <legend>Tipo de ligação</legend>
+                        <span class="field-hint">Está escrito na sua conta de luz.</span>
+                        <div class="choice-group">
+                            <label class="choice"><input type="radio" name="ligacao" value="mono"><span>Monofásica</span></label>
+                            <label class="choice"><input type="radio" name="ligacao" value="bi" checked><span>Bifásica</span></label>
+                            <label class="choice"><input type="radio" name="ligacao" value="tri"><span>Trifásica</span></label>
+                        </div>
+                    </fieldset>
+
+                    <p class="field-error" id="sim-erro" role="alert" hidden></p>
+                    <button class="btn btn-primary" type="submit">Calcular economia</button>
+                </form>
+
+                <div class="sim-result reveal" id="sim-resultado" aria-live="polite">
+                    <h3>Economia estimada por mês</h3>
+                    <p class="sim-highlight"><span id="sim-eco-mes">—</span><small id="sim-eco-pct"></small></p>
+
+                    <dl class="sim-stats">
+                        <div><dt>Economia por ano</dt><dd id="sim-eco-ano">—</dd></div>
+                        <div><dt>Potência do sistema</dt><dd id="sim-kwp">—</dd></div>
+                        <div><dt>Painéis (aprox.)</dt><dd id="sim-paineis">—</dd></div>
+                        <div><dt>Retorno estimado</dt><dd id="sim-retorno">—</dd></div>
+                    </dl>
+
+                    <p class="sim-warning">Estimativa. O valor final depende da visita técnica.</p>
+
+                    <div class="btn-group">
+                        <a class="btn btn-whatsapp" id="sim-whatsapp" href="https://wa.me/553237217064" target="_blank" rel="noopener">Enviar simulação pelo WhatsApp</a>
                     </div>
+                    <p class="sim-notes">Cálculo considera geração média da Zona da Mata mineira, o valor mínimo cobrado pela distribuidora e a regra do Fio B (Lei 14.300). Sombra, inclinação e orientação do telhado mudam o resultado.</p>
                 </div>
+            </div>
+        </section>
 
-                <div class="hero-panel reveal" aria-label="Diagnóstico técnico">
-                    <span class="panel-status"></span>
-                    <p>Atendimento técnico ativo</p>
-                    <strong>Diagnóstico, reparo e orçamento com clareza.</strong>
-                    <div class="signal-bars" aria-hidden="true">
-                        <i></i><i></i><i></i><i></i>
+        <!-- 4. COMO FUNCIONA -->
+        <section class="section section--dark" id="como-funciona" aria-labelledby="como-titulo">
+            <div class="section-heading reveal">
+                <span class="eyebrow">Como funciona</span>
+                <h2 id="como-titulo">Do primeiro contato até a energia gerada</h2>
+                <p>Você acompanha cada etapa e sabe o que está acontecendo. A gente cuida da parte técnica e da burocracia.</p>
+            </div>
+
+            <ol class="process">
+                <li class="reveal"><h3>Visita técnica</h3><p>Avaliamos o telhado, o padrão de entrada e o seu histórico de consumo.</p></li>
+                <li class="reveal"><h3>Projeto</h3><p>Dimensionamos o sistema para o seu consumo e apresentamos o orçamento detalhado.</p></li>
+                <li class="reveal"><h3>Homologação</h3><p>Preparamos a documentação e pedimos a aprovação na distribuidora de energia.</p></li>
+                <li class="reveal"><h3>Instalação</h3><p>Montagem da estrutura, dos painéis e do inversor, com a parte elétrica completa.</p></li>
+                <li class="reveal"><h3>Monitoramento</h3><p>Você acompanha a geração pelo aplicativo e conta com a gente depois da instalação.</p></li>
+            </ol>
+        </section>
+
+        <!-- 5. OBRAS REALIZADAS -->
+        <section class="section" id="obras" aria-labelledby="obras-titulo">
+            <div class="section-heading reveal">
+                <span class="eyebrow">Obras realizadas</span>
+                <h2 id="obras-titulo">Instalações feitas pela nossa equipe</h2>
+                <!-- TROCAR: incluir a quantidade real de obras feitas, se quiser divulgar -->
+                <p>Algumas das instalações que fizemos em Muriaé e região.</p>
+            </div>
+
+            <ul class="gallery">
+                <li class="reveal"><figure>
+                    <!-- TROCAR: foto real -->
+                    <div class="placeholder" role="img" aria-label="Espaço reservado para foto de instalação">Foto da obra 1</div>
+                    <figcaption>TROCAR: cidade · tipo de imóvel · potência</figcaption>
+                </figure></li>
+                <li class="reveal"><figure>
+                    <!-- TROCAR: foto real -->
+                    <div class="placeholder" role="img" aria-label="Espaço reservado para foto de instalação">Foto da obra 2</div>
+                    <figcaption>TROCAR: cidade · tipo de imóvel · potência</figcaption>
+                </figure></li>
+                <li class="reveal"><figure>
+                    <!-- TROCAR: foto real -->
+                    <div class="placeholder" role="img" aria-label="Espaço reservado para foto de instalação">Foto da obra 3</div>
+                    <figcaption>TROCAR: cidade · tipo de imóvel · potência</figcaption>
+                </figure></li>
+                <li class="reveal"><figure>
+                    <!-- TROCAR: foto real -->
+                    <div class="placeholder" role="img" aria-label="Espaço reservado para foto de instalação">Foto da obra 4</div>
+                    <figcaption>TROCAR: cidade · tipo de imóvel · potência</figcaption>
+                </figure></li>
+                <li class="reveal"><figure>
+                    <!-- TROCAR: foto real -->
+                    <div class="placeholder" role="img" aria-label="Espaço reservado para foto de instalação">Foto da obra 5</div>
+                    <figcaption>TROCAR: cidade · tipo de imóvel · potência</figcaption>
+                </figure></li>
+                <li class="reveal"><figure>
+                    <!-- TROCAR: foto real -->
+                    <div class="placeholder" role="img" aria-label="Espaço reservado para foto de instalação">Foto da obra 6</div>
+                    <figcaption>TROCAR: cidade · tipo de imóvel · potência</figcaption>
+                </figure></li>
+            </ul>
+        </section>
+
+        <!-- 6. EQUIPAMENTOS E GARANTIAS -->
+        <section class="section section--soft equip" id="equipamentos" aria-labelledby="equip-titulo">
+            <div class="section-heading reveal">
+                <span class="eyebrow">Equipamentos e garantias</span>
+                <h2 id="equip-titulo">Equipamentos certificados, garantia por escrito</h2>
+                <p>Trabalhamos com equipamentos certificados pelo Inmetro. As garantias de cada item aparecem no orçamento.</p>
+            </div>
+
+            <div class="grid grid--3">
+                <article class="card reveal">
+                    <h3>Painéis solares</h3>
+                    <p>Módulos fotovoltaicos de alta eficiência, que transformam a luz do sol em energia elétrica.</p>
+                    <strong>Garantia de desempenho de até 25 anos</strong>
+                    <!-- TROCAR: marcas de painéis -->
+                    <div class="placeholder">Marcas de painéis</div>
+                </article>
+                <article class="card reveal">
+                    <h3>Inversor</h3>
+                    <p>Converte a energia dos painéis para uso na sua casa e permite acompanhar a geração pelo celular.</p>
+                    <!-- TROCAR: confirmar garantia padrão dos inversores usados -->
+                    <strong>Garantia do fabricante</strong>
+                    <!-- TROCAR: marcas de inversores -->
+                    <div class="placeholder">Marcas de inversores</div>
+                </article>
+                <article class="card reveal">
+                    <h3>Estrutura de fixação</h3>
+                    <p>Trilhos e suportes em alumínio, adequados ao seu tipo de telhado, com vedação contra infiltração.</p>
+                    <!-- TROCAR: confirmar garantia da estrutura e da instalação -->
+                    <strong>Garantia do fabricante</strong>
+                    <!-- TROCAR: marcas de estrutura -->
+                    <div class="placeholder">Marcas de estrutura</div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 7. FINANCIAMENTO -->
+        <section class="section" id="financiamento" aria-labelledby="fin-titulo">
+            <div class="finance">
+                <div class="finance-copy reveal">
+                    <span class="eyebrow">Financiamento</span>
+                    <h2 id="fin-titulo">Dá para financiar o seu sistema</h2>
+                    <p>Existem linhas de financiamento específicas para energia solar. Em muitos casos a parcela fica próxima do valor que você deixa de pagar na conta de luz. A gente ajuda você a comparar as opções.</p>
+                    <a class="btn btn-outline" href="https://wa.me/553237217064?text=Ol%C3%A1%2C%20quero%20saber%20sobre%20financiamento%20de%20energia%20solar." target="_blank" rel="noopener">Perguntar sobre financiamento</a>
+                </div>
+                <div class="finance-partners reveal" aria-label="Bancos e parceiros">
+                    <!-- TROCAR: logos ou nomes dos bancos e parceiros de financiamento -->
+                    <div class="placeholder">Banco / parceiro 1</div>
+                    <div class="placeholder">Banco / parceiro 2</div>
+                    <div class="placeholder">Banco / parceiro 3</div>
+                    <div class="placeholder">Banco / parceiro 4</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. DEPOIMENTOS -->
+        <section class="section section--soft" id="depoimentos" aria-labelledby="dep-titulo">
+            <div class="section-heading reveal">
+                <span class="eyebrow">Depoimentos</span>
+                <h2 id="dep-titulo">Quem já gera a própria energia</h2>
+            </div>
+
+            <div class="grid grid--3">
+                <!-- TROCAR: depoimento real de cliente de energia solar (texto, nome ou iniciais, cidade, com autorização) -->
+                <article class="card testimonial reveal"><div class="placeholder">Depoimento de cliente 1</div></article>
+                <!-- TROCAR: depoimento real de cliente de energia solar -->
+                <article class="card testimonial reveal"><div class="placeholder">Depoimento de cliente 2</div></article>
+                <!-- TROCAR: depoimento real de cliente de energia solar -->
+                <article class="card testimonial reveal"><div class="placeholder">Depoimento de cliente 3</div></article>
+            </div>
+        </section>
+
+        <!-- 9. FAQ -->
+        <section class="section" id="duvidas" aria-labelledby="faq-titulo">
+            <div class="section-heading reveal">
+                <span class="eyebrow">Perguntas frequentes</span>
+                <h2 id="faq-titulo">Dúvidas sobre energia solar</h2>
+            </div>
+
+            <div class="faq">
+                <details class="reveal">
+                    <summary>A energia solar funciona em dia nublado?</summary>
+                    <div class="faq-body"><p>Funciona, mas gera menos. Em dias nublados a produção cai, às vezes bastante. Por isso o sistema é dimensionado pela média de geração do ano inteiro, e não pelo dia mais ensolarado.</p></div>
+                </details>
+                <details class="reveal">
+                    <summary>E à noite?</summary>
+                    <div class="faq-body">
+                        <p>À noite os painéis não geram. No sistema ligado à rede, o que sobra durante o dia vai para a rede da distribuidora e vira crédito em kWh, usado à noite e nos dias de pouca geração.</p>
+                        <p>Importante: se faltar energia da rede, o sistema ligado à rede desliga por segurança. Para ter energia durante quedas é preciso um sistema com baterias.</p>
                     </div>
-                </div>
+                </details>
+                <details class="reveal">
+                    <summary>O que muda com a Lei 14.300 (taxa mínima e Fio B)?</summary>
+                    <div class="faq-body">
+                        <p>A conta não zera: continua existindo um valor mínimo cobrado pela distribuidora, além da taxa de iluminação pública.</p>
+                        <p>Para sistemas com pedido feito a partir de 2023, parte da tarifa de distribuição (o chamado Fio B) passa a ser cobrada sobre a energia que você injeta na rede e usa depois. Essa cobrança é gradual: 15% em 2023, 30% em 2024, 45% em 2025, 60% em 2026, 75% em 2027 e 90% em 2028. Mesmo assim, a energia solar continua reduzindo bastante a conta, e o nosso simulador já leva essa regra em conta.</p>
+                    </div>
+                </details>
+                <details class="reveal">
+                    <summary>Precisa de manutenção?</summary>
+                    <div class="faq-body"><p>Pouca. O principal é limpar os painéis quando acumulam poeira ou sujeira e fazer uma revisão periódica das conexões, da estrutura e do inversor. Acompanhar a geração pelo aplicativo do inversor ajuda a perceber rápido se algo saiu do normal.</p></div>
+                </details>
+                <details class="reveal">
+                    <summary>Quanto tempo dura um sistema de energia solar?</summary>
+                    <div class="faq-body"><p>Os painéis costumam ter garantia de desempenho de até 25 anos e podem continuar gerando depois disso, com eficiência um pouco menor. O inversor tem vida útil menor e, ao longo da vida do sistema, pode precisar ser trocado uma vez.</p></div>
+                </details>
+                <details class="reveal">
+                    <summary>Quanto tempo leva a instalação?</summary>
+                    <!-- TROCAR: se quiser, informar o prazo médio real (montagem e processo completo) -->
+                    <div class="faq-body"><p>A montagem em uma casa costuma levar de um a poucos dias. O processo completo, com projeto, aprovação da distribuidora e vistoria, leva mais tempo, porque depende dos prazos da distribuidora. Informamos o prazo estimado no orçamento.</p></div>
+                </details>
             </div>
         </section>
 
-        <section class="section services" id="servicos">
+        <!-- 10. FORMULÁRIO DE ORÇAMENTO -->
+        <section class="section section--dark" id="orcamento" aria-labelledby="orc-titulo">
+            <div class="quote">
+                <div class="reveal">
+                    <span class="eyebrow">Orçamento</span>
+                    <div class="section-heading" style="margin:0">
+                        <h2 id="orc-titulo">Peça seu orçamento de energia solar</h2>
+                        <p>Preencha os dados e a mensagem abre pronta no WhatsApp. Respondemos em horário comercial.</p>
+                    </div>
+                    <ul class="quote-contact">
+                        <li>Telefone: <a href="tel:+553237217064">(32) 3721-7064</a></li>
+                        <li>Loja: Rua Benedito Valadares, 88, Muriaé-MG</li>
+                        <li>Atendemos Muriaé e região. <a href="energia-solar-muriae.html#cidades">Ver cidades</a></li>
+                    </ul>
+                </div>
+
+                <form class="quote-form reveal" id="orc-form" novalidate>
+                    <div class="field">
+                        <label for="orc-nome">Nome</label>
+                        <input class="input" id="orc-nome" name="nome" type="text" autocomplete="name" required>
+                    </div>
+                    <div class="field">
+                        <label for="orc-cidade">Cidade</label>
+                        <input class="input" id="orc-cidade" name="cidade" type="text" autocomplete="address-level2" placeholder="Muriaé" required>
+                    </div>
+                    <div class="field">
+                        <label for="orc-conta">Valor médio da conta de luz (R$)</label>
+                        <input class="input" id="orc-conta" name="conta" type="text" inputmode="decimal" placeholder="350" required>
+                    </div>
+                    <div class="field">
+                        <label for="orc-imovel">Tipo de imóvel</label>
+                        <select class="select" id="orc-imovel" name="imovel">
+                            <option>Casa</option>
+                            <option>Comércio</option>
+                            <option>Rural</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="orc-telhado">Tipo de telhado</label>
+                        <select class="select" id="orc-telhado" name="telhado">
+                            <option>Telha cerâmica (barro)</option>
+                            <option>Telha de fibrocimento (amianto)</option>
+                            <option>Telha metálica</option>
+                            <option>Laje</option>
+                            <option>No chão / solo</option>
+                            <option>Não sei</option>
+                        </select>
+                    </div>
+                    <p class="field-error" id="orc-erro" role="alert" hidden></p>
+                    <button class="btn btn-whatsapp" type="submit">Enviar pelo WhatsApp</button>
+                    <p class="form-note">Seus dados vão direto para o nosso WhatsApp. Não guardamos nada neste site.</p>
+                </form>
+            </div>
+        </section>
+
+        <!-- 11. ASSISTÊNCIA TÉCNICA -->
+        <section class="section section--soft" id="assistencia" aria-labelledby="ass-titulo">
             <div class="section-heading reveal">
-                <span class="eyebrow">Serviços especializados</span>
-                <h2>Tecnologia, precisão e cuidado em cada reparo.</h2>
-                <p>Uma operação preparada para resolver desde reparos rápidos até diagnósticos complexos em placa, imagem, energia e equipamentos conectados.</p>
+                <span class="eyebrow">Também fazemos</span>
+                <h2 id="ass-titulo">Assistência técnica em eletrônicos</h2>
+                <p>Foi assim que começamos, há mais de 30 anos, e continuamos atendendo na loja.</p>
             </div>
 
-            <div class="service-grid">
-                <article class="service-card reveal">
-                    <span class="icon icon-phone"></span>
-                    <h3>Assistência em celulares</h3>
-                    <p>Diagnóstico completo para falhas, quedas, bateria, câmera, áudio e desempenho.</p>
-                </article>
-                <article class="service-card reveal">
-                    <span class="icon icon-screen"></span>
-                    <h3>Troca de tela</h3>
-                    <p>Substituição com acabamento limpo, teste de toque, brilho e funcionamento.</p>
-                </article>
-                <article class="service-card reveal">
-                    <span class="icon icon-chip"></span>
-                    <h3>Reparo em placa</h3>
-                    <p>Análise técnica para curto, oxidação, conectores, carga e componentes.</p>
-                </article>
-                <article class="service-card reveal">
-                    <span class="icon icon-solar"></span>
-                    <h3>Energia solar</h3>
-                    <p>Projetos, instalação, manutenção e suporte para sistemas fotovoltaicos.</p>
-                </article>
-                <article class="service-card reveal">
-                    <span class="icon icon-drone"></span>
-                    <h3>Drones</h3>
-                    <p>Manutenção, calibração, hélices, carcaça, câmera e análise de voo.</p>
-                </article>
-                <article class="service-card reveal">
-                    <span class="icon icon-tv"></span>
-                    <h3>TVs</h3>
-                    <p>Reparo técnico para imagem, som, fonte, placa principal e conectividade.</p>
-                </article>
-                <article class="service-card reveal">
-                    <span class="icon icon-device"></span>
-                    <h3>Venda de aparelhos</h3>
-                    <p>Equipamentos selecionados com orientação para comprar certo.</p>
-                </article>
-                <article class="service-card reveal">
-                    <span class="icon icon-refresh"></span>
-                    <h3>Seminovos</h3>
-                    <p>Aparelhos revisados, testados e prontos para uso com mais segurança.</p>
-                </article>
-                <article class="service-card reveal">
-                    <span class="icon icon-cable"></span>
-                    <h3>Acessórios</h3>
-                    <p>Capas, carregadores, cabos, películas e itens essenciais para proteção.</p>
-                </article>
-            </div>
-        </section>
+            <ul class="services-compact">
+                <li class="reveal">Celulares<small>Diagnóstico, bateria, câmera, áudio</small></li>
+                <li class="reveal">Troca de tela<small>Com teste de toque e brilho</small></li>
+                <li class="reveal">Reparo em placa<small>Curto, oxidação, conectores</small></li>
+                <li class="reveal">Drones<small>Manutenção e calibração</small></li>
+                <li class="reveal">TVs<small>Imagem, som, fonte e placa</small></li>
+                <li class="reveal">Venda de aparelhos<small>Orientação para comprar certo</small></li>
+                <li class="reveal">Seminovos<small>Revisados e testados</small></li>
+                <li class="reveal">Acessórios<small>Capas, cabos, películas</small></li>
+            </ul>
 
-        <section class="section highlights" id="diferenciais">
-            <div class="section-heading reveal">
-                <span class="eyebrow">Por que escolher</span>
-                <h2>Autoridade técnica com atendimento humano.</h2>
-            </div>
-
-            <div class="highlight-grid">
-                <div class="highlight-item reveal">
-                    <strong>Mais de 30 anos de experiência</strong>
-                    <p>Empresa consolidada na cidade, com trajetória construída em confiança.</p>
-                </div>
-                <div class="highlight-item reveal">
-                    <strong>Atendimento especializado</strong>
-                    <p>Orientação clara antes, durante e depois do serviço.</p>
-                </div>
-                <div class="highlight-item reveal">
-                    <strong>Diagnóstico transparente</strong>
-                    <p>Você entende o problema e aprova o orçamento antes do reparo.</p>
-                </div>
-                <div class="highlight-item reveal">
-                    <strong>Garantia nos serviços</strong>
-                    <p>Procedimentos com teste, conferência e compromisso técnico.</p>
-                </div>
-                <div class="highlight-item reveal">
-                    <strong>Equipe técnica qualificada</strong>
-                    <p>Conhecimento aplicado em eletrônica, celulares, TVs, drones e solar.</p>
-                </div>
-                <div class="highlight-item reveal">
-                    <strong>Atendimento rápido</strong>
-                    <p>Processo objetivo para reduzir espera e devolver sua rotina.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="solar-section" id="solar">
-            <div class="solar-copy reveal">
-                <span class="eyebrow">Energia solar</span>
-                <h2>Economize até 95% na conta de energia</h2>
-                <p>Instalação, manutenção e orçamento gratuito para quem quer transformar sol em economia com uma equipe local, técnica e próxima.</p>
-                <div class="solar-list">
-                    <span>Painéis solares</span>
-                    <span>Instalação completa</span>
-                    <span>Manutenção preventiva</span>
-                    <span>Orçamento gratuito</span>
-                </div>
-                <a class="btn btn-primary" href="https://wa.me/553237217064?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20energia%20solar." target="_blank" rel="noopener">
-                    Pedir orçamento solar
-                </a>
-            </div>
-
-            <div class="solar-visual reveal" aria-hidden="true">
-                <div class="panel-array">
-                    <span></span><span></span><span></span>
-                    <span></span><span></span><span></span>
-                </div>
-                <div class="energy-card">
-                    <small>Economia estimada</small>
-                    <strong>até 95%</strong>
-                    <p>Projeto dimensionado para sua rotina.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section proof" id="prova">
-            <div class="section-heading reveal">
-                <span class="eyebrow">Prova social</span>
-                <h2>Confiança que aparece no atendimento.</h2>
-                <p>A experiência premium começa no diagnóstico e termina com o cliente sabendo exatamente o que foi feito.</p>
-            </div>
-
-            <div class="proof-layout">
-                <article class="testimonial reveal">
-                    <div class="stars" aria-label="5 estrelas">★★★★★</div>
-                    <p>“Atendimento rápido, explicaram o problema com clareza e entregaram meu celular funcionando perfeitamente.”</p>
-                    <strong>Cliente em Muriaé</strong>
-                </article>
-                <article class="testimonial reveal">
-                    <div class="stars" aria-label="5 estrelas">★★★★★</div>
-                    <p>“Equipe técnica de confiança. Levei uma TV e recebi orçamento transparente antes do serviço.”</p>
-                    <strong>Serviço de eletrônica</strong>
-                </article>
-                <article class="before-after reveal">
-                    <span>Antes</span>
-                    <div class="repair-visual cracked"></div>
-                    <span>Depois</span>
-                    <div class="repair-visual fixed"></div>
-                </article>
-            </div>
-        </section>
-
-        <section class="final-cta" id="contato">
-            <div class="final-inner reveal">
-                <span class="eyebrow">Atendimento profissional</span>
-                <h2>Seu aparelho merece atendimento profissional.</h2>
-                <p>Fale com a Silvinho Eletrônica e Energia Solar e receba orientação rápida para assistência técnica, orçamento ou energia solar.</p>
-                <div class="hero-actions">
-                    <a class="btn btn-primary" href="https://wa.me/553237217064?text=Ol%C3%A1%2C%20quero%20falar%20com%20a%20Silvinho%20Eletr%C3%B4nica%20e%20Energia%20Solar." target="_blank" rel="noopener">
-                        Falar no WhatsApp
-                    </a>
-                    <a class="btn btn-secondary" href="tel:+553237217064">Ligar agora</a>
-                </div>
+            <div class="services-cta reveal">
+                <a class="btn btn-outline" href="https://wa.me/553237217064?text=Ol%C3%A1%2C%20preciso%20de%20assist%C3%AAncia%20t%C3%A9cnica." target="_blank" rel="noopener">Pedir orçamento de conserto</a>
             </div>
         </section>
     </main>
 
+    <!-- 12. RODAPÉ -->
     <footer class="site-footer">
-        <div class="footer-brand">
-            <a class="brand" href="#inicio" aria-label="Voltar ao início">
-                <span class="brand-mark">SE</span>
-                <span>
-                    <strong>Silvinho Eletrônica</strong>
-                    <small>Energia Solar</small>
-                </span>
-            </a>
-            <p>Assistência técnica e soluções em energia solar em Muriaé-MG.</p>
-        </div>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a class="brand" href="#inicio" aria-label="Voltar ao início">
+                    <span class="brand-mark" aria-hidden="true">SE</span>
+                    <span>
+                        <strong>Silvinho Eletrônica</strong>
+                        <small>Energia Solar</small>
+                    </span>
+                </a>
+                <p>Energia solar e assistência técnica em Muriaé-MG há mais de 30 anos.</p>
+            </div>
 
-        <div class="footer-column">
-            <strong>Contato</strong>
-            <a href="tel:+553237217064">(32) 3721-7064</a>
-            <a href="https://wa.me/553237217064" target="_blank" rel="noopener">WhatsApp</a>
-            <a href="https://www.instagram.com/silvinhoeletronica/" target="_blank" rel="noopener">Instagram</a>
-        </div>
+            <div class="footer-column">
+                <strong>Contato</strong>
+                <a href="tel:+553237217064">(32) 3721-7064</a>
+                <a href="https://wa.me/553237217064" target="_blank" rel="noopener">WhatsApp</a>
+                <a href="https://www.instagram.com/silvinhoeletronica/" target="_blank" rel="noopener">Instagram</a>
+                <a href="energia-solar-muriae.html">Energia solar em Muriaé</a>
+            </div>
 
-        <div class="footer-column">
-            <strong>Endereço</strong>
-            <a href="https://www.google.com/maps/search/?api=1&query=Rua%20Benedito%20Valadares%2088%20Muria%C3%A9%20MG" target="_blank" rel="noopener">Rua Benedito Valadares, Muriaé-MG</a>
-            <span>Segunda a sexta: 09h às 18h</span>
-            <span>Sábado: 09h às 13h</span>
-        </div>
+            <div class="footer-column">
+                <strong>Endereço</strong>
+                <a href="https://www.google.com/maps/search/?api=1&amp;query=Rua%20Benedito%20Valadares%2088%20Muria%C3%A9%20MG" target="_blank" rel="noopener">Rua Benedito Valadares, 88, Muriaé-MG</a>
+                <span>Segunda a sexta: 09h às 18h</span>
+                <span>Sábado: 09h às 13h</span>
+            </div>
 
-        <div class="footer-map" aria-label="Mapa da localização">
-            <iframe title="Mapa Silvinho Eletrônica e Energia Solar" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Rua%20Benedito%20Valadares%2088%20Muria%C3%A9%20MG&output=embed"></iframe>
+            <div class="footer-map">
+                <iframe title="Mapa: Silvinho Eletrônica e Energia Solar" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Rua%20Benedito%20Valadares%2088%20Muria%C3%A9%20MG&amp;output=embed"></iframe>
+            </div>
         </div>
+        <p class="footer-bottom">© Silvinho Eletrônica e Energia Solar · Muriaé-MG</p>
     </footer>
 
-    <a class="whatsapp-float" href="https://wa.me/553237217064?text=Ol%C3%A1%2C%20gostaria%20de%20atendimento%20com%20a%20Silvinho%20Eletr%C3%B4nica." target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">
-        <span class="wa-icon"></span>
-        <span>WhatsApp</span>
+    <a class="whatsapp-float" href="https://wa.me/553237217064?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20energia%20solar." target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6.5 0 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.3Z"/></svg>
+        <span class="wa-label">WhatsApp</span>
     </a>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+    <script src="montagem.js" defer></script>
+    <script src="simulador.js" defer></script>
 </body>
 
 </html>

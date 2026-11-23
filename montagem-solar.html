@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Montagem solar – animação por rolagem | Silvinho Eletrônica</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#071B3B;--navy-2:#0A254F;--orange:#FF7A00;--orange-2:#FFB000;--white:#fff;--muted:#9fb0c8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;background:var(--navy);color:var(--white)}
+.intro,.outro{min-height:80vh;display:grid;place-items:center;text-align:center;padding:40px 24px}
+.intro h1,.outro h2{font-size:clamp(2rem,5vw,3.6rem);font-weight:900;line-height:1.05;max-width:900px}
+.intro p{color:var(--muted);margin-top:16px;font-size:1.1rem}
+.scroll-hint{margin-top:32px;color:var(--orange-2);font-weight:600;animation:bob 1.6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(8px)}}
+
+/* ===== Seção da montagem ===== */
+.montagem{position:relative;height:500vh}
+.montagem-sticky{position:sticky;top:0;height:100vh;display:grid;grid-template-columns:minmax(260px,380px) 1fr;align-items:center;gap:32px;padding:0 5vw;overflow:hidden}
+.montagem-sticky::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--sky-top,#06142c),var(--sky-bot,#0A254F));z-index:-1;transition:background .3s}
+.steps{list-style:none;display:grid;gap:14px;counter-reset:s}
+.steps li{counter-increment:s;padding:14px 18px;border-left:3px solid rgba(255,255,255,.15);opacity:.35;transition:all .4s}
+.steps li::before{content:"0" counter(s);font-size:.75rem;font-weight:800;color:var(--orange-2);display:block;letter-spacing:.1em}
+.steps strong{font-size:1.15rem;display:block}
+.steps p{font-size:.92rem;color:rgba(255,255,255,.78);max-height:0;overflow:hidden;transition:max-height .4s}
+.steps li.active{opacity:1;border-color:var(--orange);background:rgba(255,255,255,.04)}
+.steps li.active p{max-height:80px;margin-top:4px}
+.steps li.done{opacity:.6;border-color:var(--orange-2)}
+.stage{position:relative;width:100%;max-width:820px;justify-self:center}
+.stage svg{width:100%;height:auto;overflow:visible}
+.counter{position:absolute;right:2%;bottom:2%;background:rgba(255,255,255,.08);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:14px 18px;opacity:0;transform:translateY(10px);transition:all .5s}
+.counter.show{opacity:1;transform:none}
+.counter small{color:var(--muted);font-size:.75rem;text-transform:uppercase;letter-spacing:.08em}
+.counter strong{display:block;font-size:1.8rem;font-weight:900;color:var(--orange-2)}
+.progress{position:absolute;left:5vw;right:5vw;bottom:24px;height:3px;background:rgba(255,255,255,.1);border-radius:3px}
+.progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--orange),var(--orange-2));border-radius:3px}
+.btn{display:inline-block;margin-top:28px;padding:16px 28px;border-radius:999px;background:linear-gradient(90deg,var(--orange),var(--orange-2));color:var(--navy);font-weight:800;text-decoration:none}
+
+@media (max-width:860px){
+  .montagem-sticky{grid-template-columns:1fr;grid-template-rows:auto 1fr;align-content:start;padding-top:70px;gap:8px}
+  .steps li{display:none;border:0;padding:0}
+  .steps li.active{display:block;background:none}
+  .counter{top:auto;bottom:-10px}
+}
+</style>
+</head>
+<body>
+
+<section class="intro">
+  <div>
+    <h1>Veja como sua casa vira uma usina de energia</h1>
+    <p>Da estrutura no telhado até a economia na conta, peça por peça.</p>
+    <div class="scroll-hint">Role para montar ↓</div>
+  </div>
+</section>
+
+<section class="montagem" id="montagem">
+  <div class="montagem-sticky">
+    <ol class="steps">
+      <li><strong>Visita e projeto</strong><p>Analisamos sua conta, o telhado e dimensionamos o sistema ideal.</p></li>
+      <li><strong>Estrutura</strong><p>Trilhos de alumínio fixados com segurança e vedação no telhado.</p></li>
+      <li><strong>Painéis solares</strong><p>Módulos de alta eficiência com até 25 anos de garantia de desempenho.</p></li>
+      <li><strong>Inversor</strong><p>Converte a energia do sol em energia pronta para sua casa.</p></li>
+      <li><strong>Ligação e homologação</strong><p>Cuidamos de toda a parte elétrica e da aprovação junto à distribuidora.</p></li>
+      <li><strong>Gerando economia</strong><p>O sol nasce e sua conta de luz começa a cair.</p></li>
+    </ol>
+
+    <div class="stage">
+      <svg id="cena" viewBox="0 0 800 600" role="img" aria-label="Animação da montagem de um sistema de energia solar em uma casa">
+        <defs>
+          <linearGradient id="gPanel" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#1d4f9c"/><stop offset="1" stop-color="#0b2556"/>
+          </linearGradient>
+          <radialGradient id="gSun"><stop offset="0" stop-color="#FFE08a"/><stop offset=".6" stop-color="#FFB000"/><stop offset="1" stop-color="#FF7A00"/></radialGradient>
+          <filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        </defs>
+
+        <!-- Sol -->
+        <g id="sol" opacity="0">
+          <g id="raios" stroke="#FFB000" stroke-width="4" stroke-linecap="round" opacity=".7"></g>
+          <circle cx="680" cy="90" r="42" fill="url(#gSun)" filter="url(#glow)"/>
+        </g>
+
+        <!-- Chão -->
+        <rect x="0" y="520" width="800" height="80" fill="#0d2f5f"/>
+        <rect x="0" y="520" width="800" height="4" fill="#1a4785"/>
+
+        <!-- Casa (sempre visível) -->
+        <g id="casa">
+          <rect x="180" y="320" width="440" height="200" fill="#e9eef6"/>
+          <rect x="180" y="320" width="440" height="14" fill="#c9d3e2"/>
+          <rect x="230" y="370" width="80" height="70" rx="4" fill="#9cc2ea"/>
+          <path d="M270 370v70M230 405h80" stroke="#e9eef6" stroke-width="4"/>
+          <rect x="370" y="410" width="70" height="110" rx="4" fill="#8a5a3c"/>
+          <circle cx="428" cy="468" r="4" fill="#FFB000"/>
+          <polygon points="140,322 660,322 590,180 210,180" fill="#b2452f"/>
+          <polygon points="140,322 660,322 652,306 148,306" fill="#8f3523"/>
+          <!-- medidor -->
+          <rect x="196" y="455" width="28" height="40" rx="3" fill="#5b6b82"/>
+          <circle cx="210" cy="470" r="7" fill="#e9eef6"/>
+        </g>
+
+        <!-- Trilhos (gerados) -->
+        <g id="trilhos"></g>
+        <!-- Painéis (gerados) -->
+        <g id="paineis"></g>
+
+        <!-- Inversor -->
+        <g id="inversor" class="parte" data-a=".56" data-b=".66" data-dx="320" data-dy="0" data-rot="20">
+          <rect x="540" y="380" width="56" height="78" rx="6" fill="#f4f7fb" stroke="#9aa8bc" stroke-width="2"/>
+          <rect x="550" y="392" width="36" height="16" rx="2" fill="#071B3B"/>
+          <circle id="ledInv" cx="568" cy="440" r="5" fill="#5b6b82"/>
+        </g>
+
+        <!-- Cabos -->
+        <path id="cabo" d="M560 300 L600 300 L600 380 M568 458 L568 500 L210 500 L210 495"
+              fill="none" stroke="#FF7A00" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <g id="particulas"></g>
+      </svg>
+      <div class="counter" id="counter"><small>Economia estimada / ano</small><strong id="valor">R$ 0</strong></div>
+    </div>
+    <div class="progress"><i id="barra"></i></div>
+  </div>
+</section>
+
+<section class="outro">
+  <div>
+    <h2>Sua instalação pode ser a próxima.</h2>
+    <a class="btn" href="https://wa.me/553237217064?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20energia%20solar." target="_blank" rel="noopener">Pedir orçamento solar</a>
+  </div>
+</section>
+
+<script>
+(() => {
+  const NS = "http://www.w3.org/2000/svg";
+  const svg = document.getElementById("cena");
+  const sec = document.getElementById("montagem");
+  const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+  const ease = t => 1 - Math.pow(1 - t, 3);            // easeOutCubic
+  const easeBack = t => { const c = 1.6; return 1 + (c + 1) * Math.pow(t - 1, 3) + c * Math.pow(t - 1, 2); };
+
+  // Telhado como trapézio: ponto (u,v) com u 0..1 esquerda→direita, v 0..1 baixo→topo
+  const BL = [148, 306], BR = [652, 306], TL = [210, 180], TR = [590, 180];
+  const pt = (u, v) => {
+    const lx = BL[0] + (TL[0] - BL[0]) * v, rx = BR[0] + (TR[0] - BR[0]) * v;
+    const y = BL[1] + (TL[1] - BL[1]) * v;
+    return [lx + (rx - lx) * u, y];
+  };
+  const poly = (pts) => pts.map(p => p.join(",")).join(" ");
+  const el = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); parent.appendChild(e); return e; };
+
+  const parts = [];
+  const addPart = (node, a, b, dx, dy, rot, back = false) => { Object.assign(node.dataset, { a, b, dx, dy, rot }); if (back) node.dataset.back = 1; parts.push(node); };
+
+  // Trilhos
+  const gT = document.getElementById("trilhos");
+  [0.2, 0.42, 0.6, 0.82].forEach((v, i) => {
+    const p1 = pt(0.06, v), p2 = pt(0.94, v);
+    const g = el("g", {}, gT);
+    el("line", { x1: p1[0], y1: p1[1], x2: p2[0], y2: p2[1], stroke: "#cfd8e6", "stroke-width": 5, "stroke-linecap": "round" }, g);
+    addPart(g, 0.10 + i * 0.03, 0.20 + i * 0.03, -700, 0, 0);
+  });
+
+  // Painéis: 2 linhas x 5 colunas
+  const gP = document.getElementById("paineis");
+  const rows = [[0.1, 0.48], [0.54, 0.92]], cols = 5, uMin = 0.08, uMax = 0.92, gap = 0.012;
+  const panelNodes = [];
+  let k = 0;
+  rows.forEach(([v0, v1]) => {
+    for (let c = 0; c < cols; c++) {
+      const u0 = uMin + (uMax - uMin) * c / cols + gap, u1 = uMin + (uMax - uMin) * (c + 1) / cols - gap;
+      const g = el("g", {}, gP);
+      el("polygon", { points: poly([pt(u0, v0), pt(u1, v0), pt(u1, v1), pt(u0, v1)]), fill: "url(#gPanel)", stroke: "#dfe7f3", "stroke-width": 2 }, g);
+      // linhas das células
+      for (let j = 1; j < 3; j++) { const u = u0 + (u1 - u0) * j / 3; const a = pt(u, v0), b = pt(u, v1); el("line", { x1: a[0], y1: a[1], x2: b[0], y2: b[1], stroke: "#4f7fc4", "stroke-width": 1 }, g); }
+      const mid = (v0 + v1) / 2, a = pt(u0, mid), b = pt(u1, mid);
+      el("line", { x1: a[0], y1: a[1], x2: b[0], y2: b[1], stroke: "#4f7fc4", "stroke-width": 1 }, g);
+      // brilho
+      const sh = el("polygon", { points: poly([pt(u0, v0), pt(u1, v0), pt(u1, v1), pt(u0, v1)]), fill: "#FFB000", opacity: 0 }, g);
+      panelNodes.push(sh);
+      const start = 0.25 + k * 0.028;
+      addPart(g, start, start + 0.07, (Math.random() - 0.5) * 300, -620, (Math.random() - 0.5) * 70, true);
+      k++;
+    }
+  });
+
+  addPart(document.getElementById("inversor"), .56, .66, 320, 0, 20, true);
+
+  // Raios do sol
+  const gR = document.getElementById("raios");
+  for (let i = 0; i < 12; i++) { const a = i * Math.PI / 6; el("line", { x1: 680 + Math.cos(a) * 54, y1: 90 + Math.sin(a) * 54, x2: 680 + Math.cos(a) * 72, y2: 90 + Math.sin(a) * 72 }, gR); }
+
+  // centros para rotação
+  parts.forEach(p => { const b = p.getBBox(); p._c = [b.x + b.width / 2, b.y + b.height / 2]; });
+
+  const cabo = document.getElementById("cabo");
+  const L = cabo.getTotalLength();
+  cabo.style.strokeDasharray = L; 
+
+  const gPart = document.getElementById("particulas");
+  const dots = Array.from({ length: 10 }, () => el("circle", { r: 5, fill: "#FFE08a", filter: "url(#glow)", opacity: 0 }, gPart));
+
+  const sol = document.getElementById("sol"), led = document.getElementById("ledInv");
+  const steps = document.querySelectorAll(".steps li");
+  const stepAt = [0, .10, .25, .56, .66, .80];
+  const counter = document.getElementById("counter"), valor = document.getElementById("valor"), barra = document.getElementById("barra");
+  const sticky = document.querySelector(".montagem-sticky");
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  let p = 0, target = 0, t0 = performance.now();
+
+  function render(now) {
+    p += (target - p) * 0.12; // suavização
+    parts.forEach(n => {
+      const d = n.dataset, raw = clamp((p - d.a) / (d.b - d.a));
+      const e = d.back ? easeBack(raw) : ease(raw), r = 1 - e;
+      n.setAttribute("transform", `translate(${d.dx * r} ${d.dy * r}) rotate(${d.rot * r} ${n._c[0]} ${n._c[1]})`);
+      n.style.opacity = clamp(raw * 3);
+    });
+    const c = clamp((p - .66) / .12);
+    cabo.style.strokeDashoffset = L * (1 - c);
+
+    const s = ease(clamp((p - .78) / .12));
+    sol.setAttribute("opacity", s);
+    sol.setAttribute("transform", `translate(0 ${160 * (1 - s)}) rotate(${now / 60} 680 90)`);
+    document.getElementById("raios").setAttribute("transform", `rotate(${now / 40} 680 90)`);
+    sticky.style.setProperty("--sky-top", s > 0 ? `rgb(${6 + 20 * s},${20 + 55 * s},${44 + 90 * s})` : "#06142c");
+    sticky.style.setProperty("--sky-bot", s > 0 ? `rgb(${10 + 60 * s},${37 + 80 * s},${79 + 100 * s})` : "#0A254F");
+    panelNodes.forEach((n, i) => n.setAttribute("opacity", s * (0.12 + 0.08 * Math.sin(now / 400 + i))));
+    led.setAttribute("fill", s > .5 ? "#3ddc84" : "#5b6b82");
+
+    const f = clamp((p - .88) / .06);
+    dots.forEach((d, i) => {
+      const pos = ((now / 3000 + i / dots.length) % 1) * L;
+      const q = cabo.getPointAtLength(pos);
+      d.setAttribute("cx", q.x); d.setAttribute("cy", q.y); d.setAttribute("opacity", f);
+    });
+
+    counter.classList.toggle("show", p > .86);
+    valor.textContent = "R$ " + Math.round(4800 * ease(clamp((p - .86) / .12))).toLocaleString("pt-BR");
+    barra.style.width = (p * 100) + "%";
+
+    let cur = 0; stepAt.forEach((a, i) => { if (p >= a) cur = i; });
+    steps.forEach((li, i) => { li.classList.toggle("active", i === cur); li.classList.toggle("done", i < cur); });
+
+    requestAnimationFrame(render);
+  }
+
+  function onScroll() {
+    const r = sec.getBoundingClientRect(), total = sec.offsetHeight - innerHeight;
+    target = reduce ? 1 : clamp(-r.top / total);
+  }
+  addEventListener("scroll", onScroll, { passive: true });
+  addEventListener("resize", onScroll);
+  onScroll(); if (reduce) p = 1;
+  requestAnimationFrame(render);
+})();
+</script>
+</body>
+</html>
